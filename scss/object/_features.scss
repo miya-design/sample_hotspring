@@ -1,0 +1,101 @@
+.features {
+  padding-top: 80px;
+  .inner {
+  }
+  .cmn-title {
+  }
+  .main {
+  }
+  .sub {
+  }
+  .features-cont {
+    padding-top: 60px;
+  }
+  .features-list {
+  }
+  .features-item {
+    color: cl(rgb(148, 130, 130));
+    display: flex;
+    flex-flow: column-reverse;
+    + .features-item {
+      padding-top: 60px;
+      @include overTab {
+        padding-top: 0;
+      }
+    }
+    @include overTab {
+    }
+    &:nth-child(odd) {
+      @include overTab {
+        flex-flow: row-reverse;
+      }
+      .image {
+        @include overTab {
+          margin-right: 40px;
+        }
+      }
+      .text {
+        @include overTab {
+          margin-right: 40px;
+        }
+      }
+    }
+    &:nth-child(even) {
+      @include overTab {
+        flex-flow: row;
+      }
+      .image {
+        @include overTab {
+          margin-left: 40px;
+        }
+      }
+      .text {
+        @include overTab {
+          margin-left: 40px;
+        }
+      }
+    }
+
+    .text {
+      padding-right: 28px;
+      padding-left: 28px;
+      padding-top: 40px;
+      @include overTab {
+        flex: 1;
+        padding-top: 40px;
+        padding-right: 0;
+        padding-left: 0;
+      }
+    }
+    .title {
+      font-size: 18px;
+      color: cl(baige);
+      @include overTab {
+        font-size: 28px;
+      }
+    }
+    .desc {
+      color: cl(white);
+      font-size: 16px;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      @include overTab {
+        font-size: 18px;
+      }
+    }
+    .image {
+      @include overTab {
+        width: percentage(640 / 1280);
+      }
+    }
+  }
+  .features-link {
+    @include overTab {
+      text-align: center;
+    }
+    a {
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
